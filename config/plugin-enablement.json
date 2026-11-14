@@ -1,0 +1,35 @@
+{
+  "claude": {
+    "aro-jira@aro-claude-plugins": true,
+    "atlassian@claude-plugins-official": true,
+    "caveman@caveman": true,
+    "ci@ai-helpers": true,
+    "code-review@ai-helpers": true,
+    "frontend-design@claude-plugins-official": true,
+    "gopls-lsp@claude-plugins-official": true,
+    "jira@ai-helpers": true,
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "skill-creator@claude-plugins-official": true,
+    "swift-lsp@claude-plugins-official": true,
+    "utils@ai-helpers": false
+  },
+  "codex": {
+    "jira@ai-helpers": true,
+    "ci@ai-helpers": true,
+    "code-review@ai-helpers": true,
+    "aro-jira@aro-claude-plugins": true,
+    "caveman@caveman": true,
+    "atlassian@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true,
+    "gopls-lsp@claude-plugins-official": true,
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "skill-creator@claude-plugins-official": true,
+    "swift-lsp@claude-plugins-official": true
+  },
+  "omp": {
+    "jira@skillshare-dc9b6f00cdd3a3ad": true,
+    "ci@skillshare-3280d1e545094b0b": true,
+    "code-review@skillshare-e7fa7f0001be022d": true,
+    "aro-jira@skillshare-f25e198d951a2011": true
+  }
+}

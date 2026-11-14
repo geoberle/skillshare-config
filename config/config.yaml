@@ -1,0 +1,210 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/runkids/skillshare/main/schemas/config.schema.json
+
+sources:
+  skills: /Users/goberlec/personal/skills/library
+  agents: /Users/goberlec/personal/skills/agents/claude
+
+mode: merge
+
+targets:
+  claude:
+    skills:
+      path: /Users/goberlec/.claude/skills
+  claude-personal:
+    agent: claude
+    config_dir: /Users/goberlec/.claude-personal
+  codex:
+    skills:
+      path: /Users/goberlec/.codex/skills
+      enabled: false
+  omp:
+    skills:
+      path: /Users/goberlec/.omp/agent/skills
+  shared:
+    skills:
+      path: /Users/goberlec/.agents/skills
+      mode: symlink
+
+extras:
+  - name: review-agents-omp
+    source: /Users/goberlec/personal/skills/agents/omp
+    targets:
+      - path: /Users/goberlec/.omp/agent/agents
+        mode: merge
+  - name: review-agents-codex
+    source: /Users/goberlec/personal/skills/agents/codex
+    targets:
+      - path: /Users/goberlec/.codex/agents
+        mode: copy
+
+plugins:
+  packages:
+    aro-jira:
+      source: https://github.com/geoberle/aro-claude-plugins.git
+      source_ref: aro-jira
+      plugin: aro-jira
+      bindings:
+        claude:
+          id: aro-jira@aro-claude-plugins
+          version: 0.1.0
+        codex:
+          id: aro-jira@aro-claude-plugins
+          version: 0.1.0
+        omp:
+          source_ref: aro-jira
+          commit: e58287be0db27a4e10cd78ec63966c6252b35223
+          components:
+            - skills
+          id: aro-jira@skillshare-f25e198d951a2011
+          source: https://github.com/geoberle/aro-claude-plugins.git
+          plugin: aro-jira
+          digest: a27dd317085b990dabb0b8c3d07fe91bf5e908935f2e96a8ec439ac96ed7f513
+          version: 0.1.0
+    atlassian:
+      source: https://github.com/anthropics/claude-plugins-official.git
+      plugin: atlassian
+      bindings:
+        claude:
+          id: atlassian@claude-plugins-official
+          version: d1df0391c35c
+        codex:
+          id: atlassian@claude-plugins-official
+          version: 1.0.0
+    caveman:
+      source: https://github.com/JuliusBrussee/caveman.git
+      plugin: caveman
+      bindings:
+        claude:
+          id: caveman@caveman
+          version: 655b7d9c5431
+        codex:
+          id: caveman@caveman
+          version: 4.0.1
+    ci:
+      source: https://github.com/openshift-eng/ai-helpers.git
+      plugin: ci
+      bindings:
+        claude:
+          id: ci@ai-helpers
+          version: 0.0.107
+        codex:
+          id: ci@ai-helpers
+          version: 0.0.107
+        omp:
+          commit: a5d4c49ca41d4ee9bcc624b73f692cbce1cb3292
+          components:
+            - agents
+            - commands
+            - mcpServers
+            - skills
+          id: ci@skillshare-3280d1e545094b0b
+          source: https://github.com/openshift-eng/ai-helpers.git
+          plugin: ci
+          digest: e3b2f108722bcf0870567cf27c446c053685fdd44c7bd2333593326a3463986c
+          version: 0.0.107
+    code-review:
+      source: https://github.com/openshift-eng/ai-helpers.git
+      plugin: code-review
+      bindings:
+        claude:
+          id: code-review@ai-helpers
+          version: 0.0.18
+        codex:
+          id: code-review@ai-helpers
+          version: 0.0.18
+        omp:
+          commit: a5d4c49ca41d4ee9bcc624b73f692cbce1cb3292
+          components:
+            - commands
+            - skills
+          id: code-review@skillshare-e7fa7f0001be022d
+          source: https://github.com/openshift-eng/ai-helpers.git
+          plugin: code-review
+          digest: e3b2f108722bcf0870567cf27c446c053685fdd44c7bd2333593326a3463986c
+          version: 0.0.18
+    frontend-design:
+      source: https://github.com/anthropics/claude-plugins-official.git
+      plugin: frontend-design
+      bindings:
+        claude:
+          id: frontend-design@claude-plugins-official
+          version: unknown
+        codex:
+          id: frontend-design@claude-plugins-official
+          version: local
+    gopls-lsp:
+      source: https://github.com/anthropics/claude-plugins-official.git
+      plugin: gopls-lsp
+      bindings:
+        claude:
+          id: gopls-lsp@claude-plugins-official
+          version: 1.0.0
+        codex:
+          id: gopls-lsp@claude-plugins-official
+          version: 1.0.0
+    jira:
+      source: https://github.com/openshift-eng/ai-helpers.git
+      plugin: jira
+      bindings:
+        claude:
+          id: jira@ai-helpers
+          version: 0.9.6
+        codex:
+          id: jira@ai-helpers
+          version: 0.9.6
+        omp:
+          commit: a5d4c49ca41d4ee9bcc624b73f692cbce1cb3292
+          components:
+            - commands
+            - mcpServers
+            - skills
+          id: jira@skillshare-dc9b6f00cdd3a3ad
+          source: https://github.com/openshift-eng/ai-helpers.git
+          plugin: jira
+          digest: e3b2f108722bcf0870567cf27c446c053685fdd44c7bd2333593326a3463986c
+          version: 0.9.6
+    rust-analyzer-lsp:
+      source: https://github.com/anthropics/claude-plugins-official.git
+      plugin: rust-analyzer-lsp
+      bindings:
+        claude:
+          id: rust-analyzer-lsp@claude-plugins-official
+          version: 1.0.0
+        codex:
+          id: rust-analyzer-lsp@claude-plugins-official
+          version: 1.0.0
+    skill-creator:
+      source: https://github.com/anthropics/claude-plugins-official.git
+      plugin: skill-creator
+      bindings:
+        claude:
+          id: skill-creator@claude-plugins-official
+          version: 48aa43517886
+        codex:
+          id: skill-creator@claude-plugins-official
+          version: local
+    swift-lsp:
+      source: https://github.com/anthropics/claude-plugins-official.git
+      plugin: swift-lsp
+      bindings:
+        claude:
+          id: swift-lsp@claude-plugins-official
+          version: 1.0.0
+        codex:
+          id: swift-lsp@claude-plugins-official
+          version: 1.0.0
+    utils:
+      source: https://github.com/openshift-eng/ai-helpers.git
+      plugin: utils
+      bindings:
+        claude:
+          id: utils@ai-helpers
+          version: 0.0.1
+
+ignore:
+  - .DS_Store
+  - .git/
+  - __pycache__/
+
+audit:
+  block_threshold: CRITICAL

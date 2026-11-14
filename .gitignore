@@ -1,0 +1,7 @@
+backups/
+work/
+.vscode/
+.DS_Store
+__pycache__/
+.venv/
+*.pyc

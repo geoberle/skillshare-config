@@ -1,0 +1,18 @@
+{
+  "claude": [],
+  "codex": [
+    "documents@openai-primary-runtime",
+    "pdf@openai-primary-runtime",
+    "spreadsheets@openai-primary-runtime",
+    "presentations@openai-primary-runtime",
+    "template-creator@openai-primary-runtime",
+    "codex-app-tools@openai-bundled",
+    "browser@openai-bundled",
+    "unified-computer-use@openai-bundled",
+    "chrome@openai-bundled",
+    "computer-use@openai-bundled",
+    "code-review@openai-bundled",
+    "visualize@openai-bundled"
+  ],
+  "omp": []
+}

@@ -1,0 +1,15 @@
+{
+  "aro-claude-plugins": {
+    "source": "https://github.com/geoberle/aro-claude-plugins.git",
+    "ref": "aro-jira"
+  },
+  "claude-plugins-official": {
+    "source": "https://github.com/anthropics/claude-plugins-official.git"
+  },
+  "caveman": {
+    "source": "https://github.com/JuliusBrussee/caveman.git"
+  },
+  "ai-helpers": {
+    "source": "https://github.com/openshift-eng/ai-helpers.git"
+  }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "target": "claude",
+    "name": "steve",
+    "source": "agents/claude/steve.md",
+    "destination": "/Users/goberlec/.claude/agents/steve.md"
+  },
+  {
+    "target": "claude",
+    "name": "david",
+    "source": "agents/claude/david.md",
+    "destination": "/Users/goberlec/.claude/agents/david.md"
+  },
+  {
+    "target": "omp",
+    "name": "steve",
+    "source": "agents/omp/steve.md",
+    "destination": "/Users/goberlec/.omp/agent/agents/steve.md"
+  },
+  {
+    "target": "omp",
+    "name": "david",
+    "source": "agents/omp/david.md",
+    "destination": "/Users/goberlec/.omp/agent/agents/david.md"
+  },
+  {
+    "target": "codex",
+    "name": "steve",
+    "source": "agents/codex/steve.toml",
+    "destination": "/Users/goberlec/.codex/agents/steve.toml"
+  },
+  {
+    "target": "codex",
+    "name": "david",
+    "source": "agents/codex/david.toml",
+    "destination": "/Users/goberlec/.codex/agents/david.toml"
+  }
+]
